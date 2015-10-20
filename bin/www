@@ -9,6 +9,9 @@
 const app = require("../app");
 const debug = require("debug")("node-es6:server");
 const http = require("http");
+const Mongorito = require("mongorito");
+
+Mongorito.connect("localhost/using-es6-in-node");
 
 /**
  * Get port from environment and store in Express.
