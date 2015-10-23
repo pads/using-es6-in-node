@@ -12,8 +12,13 @@ router.get("/", wrap(function* (request, response) {
 
 router.post("/", wrap(function* (request, response) {
     const user = new User(request.body.user);
-    yield user.save();
-    response.json(user);
+    try {
+        yield user.save();
+        response.status(201).json(user);
+    } catch (exception) {
+        console.log(exception.errors.entries());
+        response.status(422).json({ errors: exception.asJson() });
+    }
 }));
 
 module.exports = router;
