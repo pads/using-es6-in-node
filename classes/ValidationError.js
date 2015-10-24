@@ -8,11 +8,11 @@ class ValidationError extends Error {
 
     asJson () {
         let errorsArray = [];
-        for (let [key, value] of this.errors.entries()) {
+        for (let [title, detail] of this.errors.entries()) {
             errorsArray.push({
                 status: 422,
-                title: key,
-                detail: value
+                title, // Shorthand for title: title
+                detail
             });
         }
         return errorsArray;

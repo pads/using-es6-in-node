@@ -12,6 +12,7 @@ It covers the following features:
 * generators
 * maps
 * destructuring assignments
+* Shorthand object property assignments
 
 # Setup
 
