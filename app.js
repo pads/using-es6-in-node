@@ -10,11 +10,14 @@ const bodyParser = require("body-parser");
 const routes = require("./routes/index");
 const users = require("./routes/users");
 
+const jsTemplateEngine = require("./template-engine");
+
 const app = express();
 
 // view engine setup
+app.engine("js", jsTemplateEngine);
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "hbs");
+app.set("view engine", "js");
 
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 app.use(logger("dev"));
