@@ -23,6 +23,11 @@ class User extends Model {
 
         yield next;
     }
+
+    toString () {
+        return `first_name: ${this.attributes.first_name}
+            last_name: ${this.attributes.last_name}`;
+    }
 }
 
 module.exports = User;

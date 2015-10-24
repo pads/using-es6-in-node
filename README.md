@@ -6,13 +6,14 @@ A Project to demonstrate use of [ES6 in Node](https://nodejs.org/en/docs/es6/)
 
 It covers the following features:
 
-* const variables
-* let variables
-* classes
-* generators
-* maps
-* destructuring assignments
+* `const` variables
+* `let` variables
+* Classes
+* Generators
+* Maps
+* Destructuring assignments
 * Shorthand object property assignments
+* Template strings
 
 # Setup
 

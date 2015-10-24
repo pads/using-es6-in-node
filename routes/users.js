@@ -10,6 +10,12 @@ router.get("/", wrap(function* (request, response) {
     response.json(users);
 }));
 
+router.get("/:id", wrap(function* (request, response) {
+    const user = yield User.findOne({_id: request.params.id});
+    console.log(`Found user: ${user.toString()}`);
+    response.json(user);
+}));
+
 router.post("/", wrap(function* (request, response) {
     const user = new User(request.body.user);
     try {
