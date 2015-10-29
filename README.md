@@ -17,6 +17,8 @@ It covers the following features:
 
 # Setup
 
+I've tested this with Node v4.2.1.  If you use an older version, your mileage may vary.
+
     npm install
     npm test
     npm start
